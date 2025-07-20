@@ -1,19 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Give Your Coin</title>
-  </head>
-
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal fundraiser</title>
+  <meta name="description" content="Support Nilesh. I accept Ethereum and Solana donations."/>
+  <link rel="icon" href="https://cryptologos.cc/logos/ethereum-eth-logo.ico?v=025" type="image/x-icon">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="root">
     <main>
       <div class="container">
-        <div class="title">I am poor. Please donate some coins so that I can buy an IBM Model M</div>
-        <input type="text" disabled="true" value="0x8c946F567f4B7cDc86F6DBf6CE05F50050B82A82"/>
-        <input type="text" disabled="true" value="7WkzHo3A15TNwFCVNcMt6JPJHYfK3vxmtvWhFQkjCyUS"/>
+        <div class="section">
+          <div class="text-center">
+            <h2 class="title">Donate to <a href="/" rel="noopener noreferrer">nileshpahari</a></h2>
+            <p class="desc">so that he can get an IBM Model M</p>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="address-container">
+                <img src="https://ext.same-assets.com/3918029488/3257379484.svg" alt="Ethereum Logo" class="crypto-logo"/>
+                <span class="crypto-address">0x8c946F567f4B7cDc86F6DBf6CE05F50050B82A82</span>
+              </div>
+              <button class="copy-button" onclick="copyToClipboard('0x8c946F567f4B7cDc86F6DBf6CE05F50050B82A82')">
+                <svg class="copy-icon" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+            </button>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <div class="address-container">
+                <img src="https://ext.same-assets.com/3918029488/3204300228.svg" alt="Solana Logo" class="crypto-logo"/>
+                <span class="crypto-address">7WkzHo3A15TNwFCVNcMt6JPJHYfK3vxmtvWhFQkjCyUS</span>
+              </div>
+              <button class="copy-button" onclick="copyToClipboard('7WkzHo3A15TNwFCVNcMt6JPJHYfK3vxmtvWhFQkjCyUS')">
+                <svg class="copy-icon" viewBox="0 0 24 24">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
       </div>
     </main>
-  </body>
+
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          console.log('Copied to clipboard: ' + text);
+        }).catch(err => {
+          console.error('Could not copy text: ', err);
+        });
+      }
+    </script>
+  </div>
+</body>
 </html>

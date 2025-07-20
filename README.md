@@ -1,1 +1,1 @@
-# Personal fundraise
+# Personal fundraiser
